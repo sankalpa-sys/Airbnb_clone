@@ -10,7 +10,7 @@ export default function Home({exploreData,cardsData}) {
   return (
     <div className="">
       <Head>
-        <title>KhaliFA AirBnB</title>
+        <title>Airbnb Clone</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -39,7 +39,7 @@ export default function Home({exploreData,cardsData}) {
     <LargeCard 
     img="http://links.papareact.com/4cj"
     title="The Greatest Outdoors"
-    description="Wishlists crated by Airbnb"
+    description="Wishlists created by Airbnb"
     buttonText = "Get Inspired"
     />
   </main>
