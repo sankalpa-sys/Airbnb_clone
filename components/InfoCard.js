@@ -1,9 +1,10 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Image from 'next/image'
 import {HeartIcon} from "@heroicons/react/solid"
 import {StarIcon} from "@heroicons/react/solid"
 
 function InfoCard({img,location,title,description,star,price,total}) {
+    const [Heart, setHeart] = useState("grey")
     return (
         <div className="flex py-7 px-2 border-b cursor-pointer hover:opacity-80 hover:shadow-lg tansition duration-200 ease-out first:border-t">
             <div className="relative h-24 w-40 md:h-52 md:w-80 flex-shrink-0">
@@ -12,7 +13,7 @@ function InfoCard({img,location,title,description,star,price,total}) {
             <div className="flex flex-col flex-grow pl-5">
                 <div className="flex justify-between">
                     <p>{location}</p>
-                    <HeartIcon className="h-7 cursor-pointer"/>
+                    <HeartIcon className="h-7 cursor-pointer" style={{color:Heart}} onClick={()=>Heart==="grey"? setHeart("#FD5B61"): setHeart("grey")}/>
                 </div>
                 <h4 className="text-xl">{title}</h4>
                 <div className="border-b w-10 pt-2"/>
